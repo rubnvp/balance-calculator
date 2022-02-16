@@ -1,6 +1,6 @@
 # Balance calculator
 
-Simple calculator to check if your account balance is going well according to your daily budget.
+[Balance calculator](https://balance-calculator.netlify.app/) to check if your account balance is going well according to your daily budget.
 
 ## Features
 
