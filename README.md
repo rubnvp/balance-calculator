@@ -8,3 +8,5 @@ Simple calculator to check if your account balance is going well according to yo
 - Store input values in the local storage.
 - Display expected balance per day.
 - Highlight the current day.
+
+Made with [petite-vue](https://github.com/vuejs/petite-vue).
