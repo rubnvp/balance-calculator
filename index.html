@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense calculator</title>
+    <script type="module" src="main.js"></script>
+  </head>
+  <body>
+    <div v-scope v-effect="save()" style="text-align: center">
+      <h2>{{ title }}</h2>
+      <details>
+        <summary>
+          Initial balance
+          <b>{{ initialBalance.toFixed(2) }} €</b>
+        </summary>
+        <label>
+          Daily budget
+          <input
+            v-model="dailyBudget"
+            type="number"
+            min="0"
+            style="width: 80px"
+          />
+        </label>
+        <label>
+          Offset
+          <input v-model="offset" type="number" min="0" style="width: 80px" />
+        </label>
+      </details>
+      <table style="margin: 10px auto 0 auto; border-spacing: 0">
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Balance</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="row in rows" :style="row.style">
+            <td style="text-align: left">{{ row.day }}</td>
+            <td style="text-align: right">{{ row.balance.toFixed(2) }} €</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
